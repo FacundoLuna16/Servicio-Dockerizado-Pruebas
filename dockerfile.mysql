@@ -1,0 +1,7 @@
+FROM mysql:8.2.0
+
+# Copia el archivo SQL al contenedor
+COPY dump.sql /docker-entrypoint-initdb.d/
+
+# Establece la contraseña de root
+ENV MYSQL_ROOT_PASSWORD andes2020
